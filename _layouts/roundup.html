@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<article class="roundup">
+
+  <header class="roundup__header">
+    <p class="roundup__kicker">Top Picks</p>
+    <h1 class="roundup__title">{{ page.title }}</h1>
+    {%- if page.date -%}
+    <time class="roundup__date" datetime="{{ page.date | date_to_xmlschema }}">Updated {{ page.date | date: "%d %b %Y" }}</time>
+    {%- endif -%}
+  </header>
+
+  {% include disclosure.html %}
+
+  <div class="roundup__body">
+    {{ content }}
+  </div>
+
+  {%- if page.products -%}
+  <nav class="roundup__jump-nav" aria-label="Jump to product">
+    <ol>
+      {%- for product in page.products -%}
+      <li><a href="#pick-{{ forloop.index }}">{{ product.name }}</a></li>
+      {%- endfor -%}
+    </ol>
+  </nav>
+
+  <ol class="roundup__list">
+    {%- for product in page.products -%}
+    <li class="roundup__item" id="pick-{{ forloop.index }}">
+      <h2 class="roundup__item-title">#{{ forloop.index }}. {{ product.name }}</h2>
+      {%- if product.image -%}
+      <img class="roundup__item-image" src="{{ product.image | relative_url }}" alt="{{ product.name | escape }}" loading="lazy">
+      {%- endif -%}
+      <div class="review__meta">
+        {% include star-rating.html rating=product.rating %}
+        {%- if product.price -%}
+          <span class="review__price">{{ product.currency | default: "₹" }}{{ product.price }}</span>
+        {%- else -%}
+          <span class="review__price review__price--none">Price unavailable</span>
+        {%- endif -%}
+        {%- if product.best_for -%}<span class="roundup__best-for">Best for: {{ product.best_for }}</span>{%- endif -%}
+      </div>
+      {%- if product.summary -%}<p>{{ product.summary }}</p>{%- endif -%}
+      {%- if product.pros or product.cons -%}
+      <div class="review__pros-cons">
+        {%- if product.pros -%}
+        <div class="pros">
+          <h3>Pros</h3>
+          <ul>{%- for item in product.pros -%}<li>{{ item }}</li>{%- endfor -%}</ul>
+        </div>
+        {%- endif -%}
+        {%- if product.cons -%}
+        <div class="cons">
+          <h3>Cons</h3>
+          <ul>{%- for item in product.cons -%}<li>{{ item }}</li>{%- endfor -%}</ul>
+        </div>
+        {%- endif -%}
+      </div>
+      {%- endif -%}
+      {% include affiliate-button.html asin=product.asin tag=product.affiliate_tag label="Buy Now on Amazon" %}
+    </li>
+    {%- endfor -%}
+  </ol>
+  {%- endif -%}
+
+  {%- if page.verdict -%}
+  <div class="roundup__verdict">
+    <h2>Our Verdict</h2>
+    <p>{{ page.verdict }}</p>
+  </div>
+  {%- endif -%}
+
+  {% include disclosure.html %}
+
+</article>

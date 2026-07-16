@@ -1,0 +1,256 @@
+---
+---
+
+@import "minima";
+
+// ---------------------------------------------------------------------------
+// BuyerGuide India — custom overrides on top of the minima theme.
+// Kept simple and readable for long-form review content.
+// ---------------------------------------------------------------------------
+
+:root {
+  --bgi-accent: #d9534f;
+  --bgi-accent-dark: #b52b27;
+  --bgi-border: #e5e5e5;
+  --bgi-muted: #6a737d;
+}
+
+.site-header {
+  border-bottom: 3px solid var(--bgi-accent);
+}
+
+.site-title {
+  font-weight: 700;
+}
+
+// ---- Content cards on the homepage ----------------------------------------
+.content-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.content-card {
+  border: 1px solid var(--bgi-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.content-card:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.content-card__link {
+  display: block;
+  padding: 16px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.content-card__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.content-card__type {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--bgi-accent-dark);
+  margin-bottom: 6px;
+}
+
+.content-card__title {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.content-card__excerpt {
+  color: var(--bgi-muted);
+  font-size: 14px;
+}
+
+.content-card__date {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--bgi-muted);
+}
+
+// ---- Affiliate button -------------------------------------------------
+.affiliate-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--bgi-accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.15s ease-in-out;
+}
+
+.affiliate-button:hover {
+  background: var(--bgi-accent-dark);
+  color: #fff;
+}
+
+.affiliate-button--disabled {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ccc;
+  color: #555;
+  border-radius: 6px;
+}
+
+.review__cta,
+.roundup__item .affiliate-button,
+.comparison-table__product + td .affiliate-button {
+  margin: 16px 0;
+}
+
+// ---- Disclosure -------------------------------------------------------
+.affiliate-disclosure {
+  font-size: 13px;
+  color: var(--bgi-muted);
+  border-left: 3px solid var(--bgi-border);
+  padding: 8px 12px;
+  margin: 16px 0;
+}
+
+// ---- Star rating --------------------------------------------------------
+.star-rating {
+  color: #f5a623;
+  font-weight: 700;
+}
+
+.star-rating__value {
+  color: var(--bgi-muted);
+  font-weight: 400;
+  margin-left: 4px;
+  font-size: 13px;
+}
+
+.star-rating--none {
+  color: var(--bgi-muted);
+  font-weight: 400;
+  font-size: 13px;
+}
+
+// ---- Review / comparison / roundup shared bits ---------------------------
+.review__meta,
+.roundup__item .review__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.review__price {
+  font-weight: 700;
+}
+
+.review__price--none {
+  font-weight: 400;
+  color: var(--bgi-muted);
+  font-style: italic;
+}
+
+.review__kicker,
+.comparison__kicker,
+.roundup__kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--bgi-accent-dark);
+  margin-bottom: 4px;
+}
+
+.review__hero-image,
+.roundup__item-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.review__pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 16px 0;
+}
+
+@media (max-width: 600px) {
+  .review__pros-cons {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pros h2, .pros h3 { color: #2e7d32; }
+.cons h2, .cons h3 { color: var(--bgi-accent-dark); }
+
+.specs-table,
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+.specs-table th,
+.specs-table td,
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid var(--bgi-border);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table__product img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.comparison__table-wrap {
+  overflow-x: auto;
+}
+
+.roundup__jump-nav ol {
+  padding-left: 20px;
+}
+
+.roundup__list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.roundup__item {
+  border-top: 1px solid var(--bgi-border);
+  padding: 24px 0;
+}
+
+.roundup__best-for {
+  font-size: 13px;
+  color: var(--bgi-muted);
+}
+
+.empty-state {
+  color: var(--bgi-muted);
+  font-style: italic;
+}

@@ -1,0 +1,23 @@
+{%- comment -%}
+  Renders an Amazon.in "Buy Now" affiliate button.
+
+  Usage:
+    {% include affiliate-button.html asin=page.asin tag=page.affiliate_tag label="Buy Now on Amazon" %}
+
+  Params:
+    asin  (required) - Amazon ASIN for the product
+    tag   (optional) - Associates tag; falls back to site.affiliate_tag
+    label (optional) - Button text; defaults to "Buy Now on Amazon"
+{%- endcomment -%}
+{%- assign btn_tag = include.tag | default: site.affiliate_tag -%}
+{%- assign btn_label = include.label | default: "Buy Now on Amazon" -%}
+{%- if include.asin -%}
+<a
+  class="affiliate-button"
+  href="https://www.amazon.in/dp/{{ include.asin }}?tag={{ btn_tag }}"
+  target="_blank"
+  rel="nofollow sponsored noopener"
+>{{ btn_label }} &rarr;</a>
+{%- else -%}
+<span class="affiliate-button affiliate-button--disabled" title="ASIN not available">Availability unavailable</span>
+{%- endif -%}

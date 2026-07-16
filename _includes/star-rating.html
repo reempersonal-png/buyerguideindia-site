@@ -1,0 +1,16 @@
+{%- comment -%}
+  Renders a rating as filled/empty stars out of 5.
+  Usage: {% include star-rating.html rating=page.rating %}
+  If rating is nil, shows "Not rated" rather than fabricating a score.
+{%- endcomment -%}
+{%- if include.rating -%}
+  {%- assign full = include.rating | floor -%}
+  <span class="star-rating" aria-label="Rated {{ include.rating }} out of 5">
+    {%- for i in (1..5) -%}
+      {%- if i <= full -%}★{%- else -%}☆{%- endif -%}
+    {%- endfor -%}
+    <span class="star-rating__value">{{ include.rating }}/5</span>
+  </span>
+{%- else -%}
+  <span class="star-rating star-rating--none">Rating unavailable</span>
+{%- endif -%}

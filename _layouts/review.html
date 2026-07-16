@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<article class="review">
+
+  <header class="review__header">
+    <p class="review__kicker">Product Review</p>
+    <h1 class="review__title">{{ page.title }}</h1>
+    {%- if page.product_name or page.brand -%}
+    <p class="review__subtitle">
+      {%- if page.brand %}{{ page.brand }} — {% endif -%}{{ page.product_name | default: page.title }}
+    </p>
+    {%- endif -%}
+    <div class="review__meta">
+      {% include star-rating.html rating=page.rating %}
+      {%- if page.price -%}
+        <span class="review__price">{{ page.currency | default: "₹" }}{{ page.price }}</span>
+      {%- else -%}
+        <span class="review__price review__price--none">Price unavailable</span>
+      {%- endif -%}
+      {%- if page.date -%}
+        <time class="review__date" datetime="{{ page.date | date_to_xmlschema }}">Updated {{ page.date | date: "%d %b %Y" }}</time>
+      {%- endif -%}
+    </div>
+  </header>
+
+  {% include disclosure.html %}
+
+  {%- if page.image -%}
+  <img class="review__hero-image" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+  {%- endif -%}
+
+  <div class="review__cta">
+    {% include affiliate-button.html asin=page.asin tag=page.affiliate_tag label="Check Price on Amazon" %}
+  </div>
+
+  {%- if page.pros or page.cons -%}
+  <div class="review__pros-cons">
+    {%- if page.pros -%}
+    <div class="pros">
+      <h2>Pros</h2>
+      <ul>
+        {%- for item in page.pros -%}<li>{{ item }}</li>{%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+    {%- if page.cons -%}
+    <div class="cons">
+      <h2>Cons</h2>
+      <ul>
+        {%- for item in page.cons -%}<li>{{ item }}</li>{%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+  </div>
+  {%- endif -%}
+
+  {%- if page.specs -%}
+  <h2>Specifications</h2>
+  <table class="specs-table">
+    <tbody>
+      {%- for spec in page.specs -%}
+      <tr>
+        <th>{{ spec[0] }}</th>
+        <td>{{ spec[1] }}</td>
+      </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+  {%- endif -%}
+
+  <div class="review__body">
+    {{ content }}
+  </div>
+
+  {%- if page.verdict -%}
+  <div class="review__verdict">
+    <h2>Our Verdict</h2>
+    <p>{{ page.verdict }}</p>
+  </div>
+  {%- endif -%}
+
+  <div class="review__cta review__cta--bottom">
+    {% include affiliate-button.html asin=page.asin tag=page.affiliate_tag label="Buy Now on Amazon" %}
+  </div>
+
+  {% include disclosure.html %}
+
+</article>

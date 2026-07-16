@@ -1,0 +1,121 @@
+# ---------------------------------------------------------------------------
+# BuyerGuide India — Jekyll site configuration
+# ---------------------------------------------------------------------------
+
+title: BuyerGuide India
+tagline: Honest product reviews for Indian buyers
+description: >-
+  BuyerGuide India publishes honest, research-backed product reviews,
+  comparisons, and top 5 roundups to help Indian shoppers buy with confidence.
+url: "https://buyerguideindia.online"
+baseurl: ""
+lang: en-IN
+locale: en_IN
+timezone: Asia/Kolkata
+
+# logo: /assets/images/logo.png  # uncomment once a real logo is added
+
+# Fallback Amazon affiliate tag, used when a piece of content does not set
+# its own `affiliate_tag` in front matter. Replace with your real Associates tag.
+affiliate_tag: "buyerguideindia-21"
+affiliate_disclosure: >-
+  Disclosure: This article contains affiliate links. If you buy through our
+  links, we may earn a commission at no extra cost to you.
+
+author:
+  name: BuyerGuide India Team
+  email: hello@buyerguideindia.online
+
+twitter:
+  username: buyerguideindia
+  card: summary_large_image
+
+social:
+  name: BuyerGuide India
+  links: []
+
+# ---------------------------------------------------------------------------
+# Theme
+# ---------------------------------------------------------------------------
+theme: minima
+minima:
+  skin: classic
+  social_links: []
+
+header_pages:
+  - about.md
+  - affiliate-disclosure.md
+  - contact.md
+  - privacy-policy.md
+
+# ---------------------------------------------------------------------------
+# Plugins
+# ---------------------------------------------------------------------------
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ---------------------------------------------------------------------------
+# Content collections
+# ---------------------------------------------------------------------------
+collections:
+  reviews:
+    output: true
+    permalink: /reviews/:path/
+  comparisons:
+    output: true
+    permalink: /comparisons/:path/
+  roundups:
+    output: true
+    permalink: /roundups/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "reviews"
+    values:
+      layout: "review"
+      sitemap: true
+  - scope:
+      path: ""
+      type: "comparisons"
+    values:
+      layout: "comparison"
+      sitemap: true
+  - scope:
+      path: ""
+      type: "roundups"
+    values:
+      layout: "roundup"
+      sitemap: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# ---------------------------------------------------------------------------
+# Build settings
+# ---------------------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  # kramdown's default (non-GFM) parser is used deliberately: it natively
+  # supports pipe tables and passes through raw inline/block HTML (e.g. the
+  # affiliate "Buy Now" <a> buttons in roundup/comparison articles) without
+  # requiring the extra kramdown-parser-gfm gem.
+  syntax_highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+  - .github
+
+sass:
+  quiet_deps: true

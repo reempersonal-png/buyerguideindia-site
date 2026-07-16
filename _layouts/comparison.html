@@ -1,0 +1,80 @@
+---
+layout: default
+---
+<article class="comparison">
+
+  <header class="comparison__header">
+    <p class="comparison__kicker">Comparison</p>
+    <h1 class="comparison__title">{{ page.title }}</h1>
+    {%- if page.date -%}
+    <time class="comparison__date" datetime="{{ page.date | date_to_xmlschema }}">Updated {{ page.date | date: "%d %b %Y" }}</time>
+    {%- endif -%}
+  </header>
+
+  {% include disclosure.html %}
+
+  {%- if page.products -%}
+  <div class="comparison__table-wrap">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Rating</th>
+          <th>Price</th>
+          <th>Best for</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for product in page.products -%}
+        <tr>
+          <td class="comparison-table__product">
+            {%- if product.image -%}<img src="{{ product.image | relative_url }}" alt="{{ product.name | escape }}" loading="lazy">{%- endif -%}
+            <span>{{ product.name }}</span>
+          </td>
+          <td>{% include star-rating.html rating=product.rating %}</td>
+          <td>
+            {%- if product.price -%}{{ product.currency | default: "₹" }}{{ product.price }}{%- else -%}<span class="review__price--none">Unavailable</span>{%- endif -%}
+          </td>
+          <td>{{ product.best_for | default: "—" }}</td>
+          <td>{% include affiliate-button.html asin=product.asin tag=product.affiliate_tag label="View" %}</td>
+        </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
+  {%- endif -%}
+
+  <div class="comparison__body">
+    {{ content }}
+  </div>
+
+  {%- if page.products -%}
+  <h2>Product Details</h2>
+  {%- for product in page.products -%}
+  <div class="comparison__product-detail">
+    <h3>{{ product.name }}</h3>
+    <div class="review__meta">
+      {% include star-rating.html rating=product.rating %}
+      {%- if product.price -%}
+        <span class="review__price">{{ product.currency | default: "₹" }}{{ product.price }}</span>
+      {%- else -%}
+        <span class="review__price review__price--none">Price unavailable</span>
+      {%- endif -%}
+    </div>
+    {%- if product.description -%}<p>{{ product.description }}</p>{%- endif -%}
+    {% include affiliate-button.html asin=product.asin tag=product.affiliate_tag label="Buy Now on Amazon" %}
+  </div>
+  {%- endfor -%}
+  {%- endif -%}
+
+  {%- if page.verdict -%}
+  <div class="comparison__verdict">
+    <h2>Our Verdict</h2>
+    <p>{{ page.verdict }}</p>
+  </div>
+  {%- endif -%}
+
+  {% include disclosure.html %}
+
+</article>
