@@ -9,10 +9,7 @@ layout: default
 
   {{ content }}
 
-  {%- assign reviews = site.reviews | default: empty -%}
-  {%- assign comparisons = site.comparisons | default: empty -%}
-  {%- assign roundups = site.roundups | default: empty -%}
-  {%- assign all_items = reviews | concat: comparisons | concat: roundups | sort: "date" | reverse -%}
+  {%- assign all_items = site.reviews | concat: site.comparisons | concat: site.roundups | sort: "date" | reverse -%}
 
   {%- if all_items.size > 0 -%}
   <h2 class="archive-heading">Latest guides</h2>
