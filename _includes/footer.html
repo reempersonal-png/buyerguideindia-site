@@ -16,13 +16,10 @@
       </div>
 
       <div class="footer-col footer-col-2">
-        {%- if site.social.links and site.social.links.size > 0 -%}
-        <ul class="social-media-list">
-          {%- for link in site.social.links -%}
-          <li><a href="{{ link }}" rel="me">{{ link }}</a></li>
-          {%- endfor -%}
+        <ul class="contact-list">
+          <li><a href="{{ "/affiliate-disclosure/" | relative_url }}">Affiliate Disclosure</a></li>
+          <li><a href="{{ "/privacy-policy/" | relative_url }}">Privacy Policy</a></li>
         </ul>
-        {%- endif -%}
       </div>
 
       <div class="footer-col footer-col-3">

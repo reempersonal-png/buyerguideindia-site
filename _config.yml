@@ -43,10 +43,10 @@ minima:
   social_links: []
 
 header_pages:
+  - reviews.md
+  - roundups.md
   - about.md
-  - affiliate-disclosure.md
   - contact.md
-  - privacy-policy.md
 
 # ---------------------------------------------------------------------------
 # Plugins
