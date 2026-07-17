@@ -64,8 +64,6 @@ If you want a well-proven, feature-rich dashcam with ADAS and GPS, and you'd rat
 
 If you need true 4K front resolution, or want 24-hour parking mode working out of the box without buying extra hardware, look elsewhere.
 
-### Buy on Amazon
-
 <a href="https://www.amazon.in/dp/B0CVH2K929?tag=coralsnadhill-21" style="display:inline-block;background:#FF9900;color:#111;padding:12px 28px;border-radius:6px;font-weight:bold;text-decoration:none;">Buy Now on Amazon →</a>
 
 ## Qubo Dashcam Pro X
@@ -110,8 +108,6 @@ Extremely budget-conscious buyers, especially in hot climates, who want a simple
 
 If you want a confirmed warranty before buying, the highest-rated option in this list, or dual-channel front and rear recording, look at the other cameras here first.
 
-### Buy on Amazon
-
 <a href="https://www.amazon.in/dp/B0CGQXY29P?tag=coralsnadhill-21" style="display:inline-block;background:#FF9900;color:#111;padding:12px 28px;border-radius:6px;font-weight:bold;text-decoration:none;">Buy Now on Amazon →</a>
 
 ## REDTIGER F7N Elite
@@ -155,8 +151,6 @@ Buyers who want 4K clarity and touchscreen convenience with everything included 
 
 Budget buyers, or anyone who specifically wants ADAS lane and collision warning features.
 
-### Buy on Amazon
-
 <a href="https://www.amazon.in/dp/B0F1955GH4?tag=coralsnadhill-21" style="display:inline-block;background:#FF9900;color:#111;padding:12px 28px;border-radius:6px;font-weight:bold;text-decoration:none;">Buy Now on Amazon →</a>
 
 ## DDPAI/PRO
@@ -194,8 +188,6 @@ Budget-conscious buyers who want a simple, well-rated dashcam with a solid warra
 ### Who Should Avoid This
 
 If you need GPS tracking, 4K resolution, dual-channel front and rear recording, or full spec transparency before buying, look at the other cameras here first.
-
-### Buy on Amazon
 
 <a href="https://www.amazon.in/dp/B0FGWMJKC1?tag=coralsnadhill-21" style="display:inline-block;background:#FF9900;color:#111;padding:12px 28px;border-radius:6px;font-weight:bold;text-decoration:none;">Buy Now on Amazon →</a>
 
@@ -237,8 +229,6 @@ Buyers who want the best available resolution, sensor, and field of view in this
 ### Who Should Avoid This
 
 Budget buyers, or anyone unwilling to pay roughly double the price of the mid-range 70mai A510 for the extra resolution and field of view.
-
-### Buy on Amazon
 
 <a href="https://www.amazon.in/dp/B0CCYX43GN?tag=coralsnadhill-21" style="display:inline-block;background:#FF9900;color:#111;padding:12px 28px;border-radius:6px;font-weight:bold;text-decoration:none;">Buy Now on Amazon →</a>
 

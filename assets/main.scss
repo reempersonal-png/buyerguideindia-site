@@ -1,6 +1,11 @@
 ---
 ---
 
+// Override minima's Sass defaults before importing the theme — minima
+// declares these with `!default`, so setting them first here wins.
+$base-font-size: 18px;
+$content-width: 900px;
+
 @import "minima";
 
 // ---------------------------------------------------------------------------
