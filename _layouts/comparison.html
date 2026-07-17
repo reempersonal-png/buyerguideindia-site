@@ -13,6 +13,10 @@ layout: default
 
   {% include disclosure.html %}
 
+  {%- if page.image -%}
+  <img class="comparison__hero-image" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+  {%- endif -%}
+
   {%- if page.products -%}
   <div class="comparison__table-wrap">
     <table class="comparison-table">
