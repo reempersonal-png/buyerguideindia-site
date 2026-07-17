@@ -22,8 +22,8 @@ layout: default
         {%- endif -%}
         <span class="content-card__type">{{ item.collection | capitalize }}</span>
         <h3 class="content-card__title">{{ item.title | escape }}</h3>
-        {%- if item.excerpt -%}
-        <p class="content-card__excerpt">{{ item.excerpt | strip_html | truncatewords: 24 }}</p>
+        {%- if item.description -%}
+        <p class="content-card__excerpt">{{ item.description | strip_html | truncatewords: 24 }}</p>
         {%- endif -%}
         {%- if item.date -%}
         <span class="content-card__date">{{ item.date | date: "%d %b %Y" }}</span>
