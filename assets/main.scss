@@ -192,6 +192,18 @@ $content-width: 900px;
   margin: 16px 0;
 }
 
+// On desktop/tablet the hero images were rendering at full content width
+// (900px) and up to 420px tall — a huge banner that pushed the article
+// down. Mobile viewports are narrow enough that the same rule already
+// looks fine, so this only tightens things above the phone breakpoint.
+@media (min-width: 601px) {
+  .review__hero-image,
+  .roundup__hero-image,
+  .comparison__hero-image {
+    max-height: 350px;
+  }
+}
+
 .review__pros-cons {
   display: grid;
   grid-template-columns: 1fr 1fr;

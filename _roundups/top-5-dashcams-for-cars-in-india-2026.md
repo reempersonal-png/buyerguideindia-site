@@ -3,7 +3,7 @@ title: "Top 5 Best Dashcams for Cars in India 2026"
 date: 2026-07-15
 description: "Compare the top 5 dashcams for cars in India (2026) — 70mai A510, Qubo Dashcam Pro X, REDTIGER F7N Elite, DDPAI/PRO, and 70mai A810 — with verified prices, ratings, and specs."
 category: dashcams
-image: /assets/images/2026-07-15-dashcams-hero.png
+image: /assets/images/2026-07-15-dashcams-hero.jpg
 ---
 
 ## Introduction
