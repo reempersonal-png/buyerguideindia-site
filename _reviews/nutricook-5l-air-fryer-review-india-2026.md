@@ -8,6 +8,7 @@ price: "5,999"
 currency: "Rs "
 asin: B0DN162F92
 affiliate_tag: coralsnadhill-21
+image: /assets/images/nutricook-5l-air-fryer-hero.jpg
 ---
 
 *Prices mentioned were verified at the time of writing. Prices on Amazon change frequently - tap the Buy Now on Amazon button to see the exact current price.*
