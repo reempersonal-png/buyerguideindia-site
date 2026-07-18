@@ -20,6 +20,40 @@ $content-width: 900px;
   --bgi-muted: #6a737d;
 }
 
+// ---- Horizontal overflow protection ---------------------------------------
+// Pinch-zooming out on phones was revealing white space to the right of the
+// page. Root cause: article bodies (review/roundup/comparison content) are
+// plain Markdown, and kramdown renders pipe tables as a bare <table> with no
+// wrapper element — the "Quick Comparison Table" in roundup articles is 7
+// columns wide and doesn't fit a phone viewport. Turning the table itself
+// into a block-level scroll container (the same trick used by GitHub's
+// markdown CSS) confines the scroll to the table instead of the whole page,
+// without requiring a wrapper div around content we don't control.
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+pre,
+code {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
 .site-header {
   border-bottom: 3px solid var(--bgi-accent);
 }
