@@ -3,6 +3,8 @@ layout: default
 ---
 <article class="roundup">
 
+  {% include breadcrumbs.html %}
+
   <header class="roundup__header">
     <p class="roundup__kicker">Top Picks</p>
     <h1 class="roundup__title">{{ page.title }}</h1>
@@ -75,6 +77,8 @@ layout: default
     <p>{{ page.verdict }}</p>
   </div>
   {%- endif -%}
+
+  {% include related-guides.html %}
 
   {% include disclosure.html %}
 

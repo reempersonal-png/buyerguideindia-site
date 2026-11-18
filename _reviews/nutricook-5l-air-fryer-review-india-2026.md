@@ -1,7 +1,7 @@
 ---
 layout: review
-title: "Nutricook 5L Air Fryer Review (India 2026): Is It Worth It?"
-description: "Nutricook 5L Air Fryer Slim (AFS100) review for India — verified price, 4.6 rating, 7 cooking programs, and toxin-free ceramic coating, so you know if it's worth buying in 2026."
+title: "Nutricook 5L Air Fryer Review (India 2026): Worth It?"
+description: "Nutricook 5L Air Fryer Slim (AFS100) review: Rs 5,999, 4.6 rating, 7 presets and a PFAS-free ceramic coating. Is it worth buying in India?"
 date: 2026-07-18
 rating: 4.6
 price: "5,999"

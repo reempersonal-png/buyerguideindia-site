@@ -1,7 +1,7 @@
 ---
 layout: review
-title: "Usha 423N 2000W Heat Convector Review (India 2026): Is It Worth It?"
-description: "Usha 423N heat convector room heater review for India: 2000W with 3 heat settings, twin turbo fan, thermostat and ISI mark, for small rooms up to 150 sq ft."
+title: "Usha 423N Room Heater Review (India 2026): Worth It?"
+description: "Usha 423N 2000W room heater review: 3 heat settings, twin turbo fan, thermostat and ISI mark for small rooms up to 150 sq ft. Is it worth buying?"
 date: 2026-11-18
 rating: null
 price: "2,679"

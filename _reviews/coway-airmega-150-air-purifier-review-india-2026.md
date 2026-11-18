@@ -1,7 +1,7 @@
 ---
 layout: review
-title: "Coway Airmega 150 Air Purifier Review (India 2026): Is It Worth It?"
-description: "Coway Airmega 150 (AP-1019C) review for India: Amazon's best-selling air purifier, with H13 True HEPA filtration, 303 m³/h CADR, 355 sq ft coverage and an 8,500-hour filter life."
+title: "Coway Airmega 150 Review (India 2026): Worth It?"
+description: "Coway Airmega 150 (AP-1019C) review: Amazon India's best-selling air purifier, with H13 HEPA, 303 m³/h CADR and 355 sq ft coverage."
 date: 2026-11-18
 rating: null
 price: "14,999"

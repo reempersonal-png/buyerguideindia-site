@@ -3,6 +3,8 @@ layout: default
 ---
 <article class="review">
 
+  {% include breadcrumbs.html %}
+
   <header class="review__header">
     <p class="review__kicker">Product Review</p>
     <h1 class="review__title">{{ page.title }}</h1>
@@ -83,6 +85,8 @@ layout: default
   <div class="review__cta review__cta--bottom">
     {% include affiliate-button.html asin=page.asin tag=page.affiliate_tag label="Buy Now on Amazon" %}
   </div>
+
+  {% include related-guides.html %}
 
   {% include disclosure.html %}
 

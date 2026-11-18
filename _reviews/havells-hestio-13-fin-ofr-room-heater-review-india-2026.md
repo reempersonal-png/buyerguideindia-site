@@ -1,7 +1,7 @@
 ---
 layout: review
-title: "Havells Hestio 13 Fin Oil Filled Room Heater Review (India 2026): Is It Worth It?"
-description: "Havells Hestio 13 Fin straight fin OFR (GHR0FDKK290) review for India: 2900W oil-filled radiator with PTC fan, 3 heat settings, tilt switch and retractable wheels."
+title: "Havells Hestio 13 Fin OFR Review (India 2026)"
+description: "Havells Hestio 13 Fin OFR (GHR0FDKK290) review: 2900W oil-filled room heater with PTC fan, tilt switch and 3 heat settings. Is it worth it?"
 date: 2026-11-18
 rating: null
 price: "14,499"

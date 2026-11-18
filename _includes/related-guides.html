@@ -1,0 +1,14 @@
+{%- comment -%}
+  Internal links to other guides, newest first, excluding this page.
+{%- endcomment -%}
+{%- assign related_items = site.reviews | concat: site.comparisons | concat: site.roundups | where_exp: "item", "item.url != page.url" | sort: "date" | reverse -%}
+{%- if related_items.size > 0 -%}
+<aside class="related-guides" aria-label="More buying guides">
+  <h2>More buying guides</h2>
+  <ul>
+    {%- for item in related_items limit: 4 %}
+    <li><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>
+    {%- endfor %}
+  </ul>
+</aside>
+{%- endif -%}

@@ -2,6 +2,7 @@
 layout: page
 title: Privacy Policy
 permalink: /privacy-policy/
+description: "BuyerGuide India privacy policy: what information this site collects, how it is used, and the choices you have."
 ---
 
 _Last updated: [add date when this page is finalised]_

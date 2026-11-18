@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+description: "About BuyerGuide India: who we are, how we research product reviews for Indian shoppers, and how we stay independent from brands."
 ---
 
 BuyerGuide India is a product review website for Indian shoppers. We publish

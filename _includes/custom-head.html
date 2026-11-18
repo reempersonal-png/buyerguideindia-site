@@ -12,3 +12,14 @@
 })(window,document,'script','dataLayer','GTM-K877SKVZ');
 </script>
 <!-- End Google Tag Manager -->
+
+{%- comment -%}
+  Fallback social-share image for articles without their own `image`.
+  jekyll-seo-tag only emits og:image when page.image is set.
+{%- endcomment -%}
+{%- unless page.image -%}
+<meta property="og:image" content="{{ '/assets/images/og-default.png' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="{{ '/assets/images/og-default.png' | absolute_url }}">
+{%- endunless -%}

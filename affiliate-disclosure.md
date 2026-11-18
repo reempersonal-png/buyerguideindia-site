@@ -2,6 +2,7 @@
 layout: page
 title: Affiliate Disclosure
 permalink: /affiliate-disclosure/
+description: "BuyerGuide India affiliate disclosure: how we earn commissions through the Amazon Associates Programme at no extra cost to you."
 ---
 
 BuyerGuide India is a participant in the Amazon Associates Programme, an

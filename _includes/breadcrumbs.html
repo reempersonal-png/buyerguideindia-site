@@ -1,0 +1,31 @@
+{%- comment -%}
+  Visible breadcrumbs + BreadcrumbList structured data for collection
+  articles (reviews, comparisons, roundups).
+{%- endcomment -%}
+{%- if page.collection -%}
+{%- assign crumb_parent = site.pages | where: "archive_collection", page.collection | first -%}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {%- if crumb_parent %}
+    <li><a href="{{ crumb_parent.url | relative_url }}">{{ crumb_parent.title | escape }}</a></li>
+    {%- endif %}
+    <li aria-current="page">{{ page.title | escape }}</li>
+  </ol>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": {{ '/' | absolute_url | jsonify }}},
+    {%- if crumb_parent %}
+    {"@type": "ListItem", "position": 2, "name": {{ crumb_parent.title | jsonify }}, "item": {{ crumb_parent.url | absolute_url | jsonify }}},
+    {"@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }}}
+    {%- else %}
+    {"@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }}}
+    {%- endif %}
+  ]
+}
+</script>
+{%- endif -%}

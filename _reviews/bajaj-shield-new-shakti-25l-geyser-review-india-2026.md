@@ -1,7 +1,7 @@
 ---
 layout: review
-title: "Bajaj Shield Series New Shakti 25L Geyser Review (India 2026): Is It Worth It?"
-description: "Bajaj Shield Series New Shakti 25L storage water heater review for India: 2000W, 8 bar pressure rating for high-rise homes, child safety mode and a 10-year tank warranty."
+title: "Bajaj New Shakti 25L Geyser Review (India 2026)"
+description: "Bajaj Shield Series New Shakti 25L geyser review: 2000W, 8 bar rating for high-rise homes, child safety mode and a 10-year tank warranty."
 date: 2026-11-18
 rating: null
 price: null
